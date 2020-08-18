@@ -6,19 +6,27 @@ package sas.edu.notarial_office.model;
  * 14 Aug 2020
  */
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.List;
 import java.util.Objects;
 
+@Document
 public class Discount {
 
+    @Id
     private String id;
     private String name;
     private byte percentageDiscount;
 
     /********************************
        * 3 types of constructors
-    ********************************/
+    *******************************
+     * @param hh
+     * @param percentageDiscount*/
 
-    public Discount() {
+    public Discount(String hh, int percentageDiscount) {
     }
 
     public Discount(String name, byte percentageDiscount) {
@@ -92,4 +100,5 @@ public class Discount {
                 ", percentageDiscount=" + percentageDiscount +
                 '}';
     }
+
 }

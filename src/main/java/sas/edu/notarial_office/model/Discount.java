@@ -18,23 +18,21 @@ public class Discount {
     @Id
     private String id;
     private String name;
-    private byte percentageDiscount;
+    private int percentageDiscount;
 
     /********************************
        * 3 types of constructors
-    *******************************
-     * @param hh
-     * @param percentageDiscount*/
+    ********************************/
 
-    public Discount(String hh, int percentageDiscount) {
+    public Discount() {
     }
 
-    public Discount(String name, byte percentageDiscount) {
+    public Discount(String name, int percentageDiscount) {
         this.name = name;
         this.percentageDiscount = percentageDiscount;
     }
 
-    public Discount(String id, String name, byte percentageDiscount) {
+    public Discount(String id, String name, int percentageDiscount) {
         this.id = id;
         this.name = name;
         this.percentageDiscount = percentageDiscount;
@@ -52,7 +50,7 @@ public class Discount {
         return name;
     }
 
-    public byte getPercentageDiscount() {
+    public int getPercentageDiscount() {
         return percentageDiscount;
     }
 

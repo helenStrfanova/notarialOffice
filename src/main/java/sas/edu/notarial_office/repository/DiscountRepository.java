@@ -8,10 +8,10 @@ package sas.edu.notarial_office.repository;
 
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 import sas.edu.notarial_office.model.Discount;
 
+@Repository
 public interface DiscountRepository extends MongoRepository<Discount,String> {
-
-
 
 }

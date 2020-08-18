@@ -31,7 +31,7 @@ public class DiscountWebController {
     @RequestMapping(value = "/get/list", method =RequestMethod.GET)
     String showAll(Model model){
         model.addAttribute("list",discountServisesImpls.getAll());
-        return "cafedraList";
+        return "discountlist";
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)

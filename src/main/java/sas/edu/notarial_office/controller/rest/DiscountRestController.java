@@ -1,4 +1,5 @@
-package sas.edu.notarial_office.controller.rest;/*
+package sas.edu.notarial_office.controller.rest;
+/*
  * @author Alona Sviridova
  * @version 1
  * Project name: "notarialOffice"
@@ -21,13 +22,12 @@ public class DiscountRestController {
 
     @RequestMapping("")
     String getIndex(){
-        return "<h1>Index Web Controller</h1>";
+        return "<h1>Index Rest Controller</h1>";
     }
-
 
     @GetMapping("/hello")
     String getHello(){
-        return "<h1>Hello form discount controller</h1>";
+        return "<h1>Hello form Cafedra Controller</h1>";
     }
 
     @RequestMapping(value = "/get/list", method = RequestMethod.GET)

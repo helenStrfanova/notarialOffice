@@ -1,4 +1,5 @@
-package sas.edu.notarial_office.servises.discount.impls;/*
+package sas.edu.notarial_office.servises.discount.impls;
+/*
  * @author Alona Sviridova
  * @version 1
  * Project name: "notarialOffice"

@@ -11,10 +11,10 @@ import java.util.List;
 
 public interface IDiscountServises {
 
-    Discount create(Discount discont);
+    Discount create(Discount discount);
     Discount get(String id);
     Discount delete(String id);
-    Discount update(Discount discont);
+    Discount update(Discount discount);
     List<Discount> getAll();
 
 }

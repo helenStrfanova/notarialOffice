@@ -1,8 +1,9 @@
+<#import "/spring.ftl" as spring/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Application</title>
+    <title>Title</title>
 </head>
 <body>
 <h1>Discount</h1>

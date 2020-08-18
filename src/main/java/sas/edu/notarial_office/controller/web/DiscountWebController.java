@@ -1,4 +1,5 @@
-package sas.edu.notarial_office.controller.web;/*
+package sas.edu.notarial_office.controller.web;
+/*
  * @author Alona Sviridova
  * @version 1
  * Project name: "notarialOffice"
@@ -8,7 +9,6 @@ package sas.edu.notarial_office.controller.web;/*
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -22,10 +22,16 @@ public class DiscountWebController {
     @Autowired
     DiscountServisesImpls discountServisesImpls;
 
-    @RequestMapping("/get/list")
+   /* @RequestMapping("/get/list")
     String showAll(Model model) {
         model.addAttribute("list", discountServisesImpls.getAll());
-        return "cdiscountlist";
+        return "discountlist";
+    }*/
+
+    @RequestMapping(value = "/get/list", method =RequestMethod.GET)
+    String showAll(Model model){
+        model.addAttribute("list",discountServisesImpls.getAll());
+        return "cafedraList";
     }
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
@@ -33,7 +39,7 @@ public class DiscountWebController {
 
         discountServisesImpls.delete(id);
         model.addAttribute("list", discountServisesImpls.getAll());
-        return "redirect:/web/cafedra/get/list";
+        return "redirect:/web/discount/get/list";
     }
 
     @RequestMapping(value = "/get/{id}", method = RequestMethod.GET)
@@ -43,13 +49,13 @@ public class DiscountWebController {
         return discount.toString();
     }
 
-    /*
     @RequestMapping("/reloadDB")
     String reloadDatabase() {
         discountServisesImpls.reloadDatabase();
-        return "redirect:/web/cafedra/get/list";
+        return "redirect:/web/discount/get/list";
     }
 
+    /*
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public String createCafedra(Model model) {
         CafedraForm cafedraForm = new CafedraForm();

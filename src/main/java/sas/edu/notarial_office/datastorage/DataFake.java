@@ -1,4 +1,5 @@
-package sas.edu.notarial_office.datastorage;/*
+package sas.edu.notarial_office.datastorage;
+/*
  * @author Alona Sviridova
  * @version 1
  * Project name: "notarialOffice"

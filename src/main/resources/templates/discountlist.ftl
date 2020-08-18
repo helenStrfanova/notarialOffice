@@ -20,10 +20,10 @@
                 <td>${item.name}</td>
                 <td>${item.desc}</td>
                 <td>${item.chief}</td>
-                <td><a href="http://localhost:8081/web/discount/update/${item.id}">
+                <td><a href="http://localhost:8080/web/discount/update/${item.id}">
                         <input type="button" value="update" class="primary">
                     </a> </td>
-                <td><a href="http://localhost:8081/web/discount/delete/${item.id}">
+                <td><a href="http://localhost:8080/web/discount/delete/${item.id}">
                         <input type="button" value="delete" class="btn-danger">
                     </a> </td>
             </tr>

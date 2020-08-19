@@ -9,7 +9,9 @@ package sas.edu.notarial_office.datastorage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import sas.edu.notarial_office.model.Discount;
+import sas.edu.notarial_office.model.NotarialService;
 import sas.edu.notarial_office.repository.DiscountRepository;
+import sas.edu.notarial_office.repository.NotarialServiceRepository;
 
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
@@ -21,24 +23,39 @@ public class DataFake {
 
     @Autowired
     DiscountRepository discountRepository;
+    @Autowired
+    NotarialServiceRepository notarialServiceRepository;
 
     List<Discount> discounts = new LinkedList<>(Arrays.asList(
             new Discount("Small", 5),
             new Discount("Medium", 10),
             new Discount("Large", 15)));
 
+    List<NotarialService> notarialServices = new LinkedList<>(Arrays.asList(
+            new NotarialService("Translate", "Translate public documents for government"),
+            new NotarialService("Apostil", "Make apostil on the document."),
+            new NotarialService("Testament", "Help in making a testament")));
+
     @PostConstruct
     public void init(){
         discountRepository.deleteAll();
         discountRepository.saveAll(discounts);
+        notarialServiceRepository.deleteAll();
+        notarialServiceRepository.saveAll(notarialServices);
     }
 
     public List<Discount> getDiscounts() {
         return discounts;
     }
-
     public void setDiscounts(List<Discount> discounts) {
         this.discounts = discounts;
+    }
+
+    public List<NotarialService> getNotarialServices() {
+        return notarialServices;
+    }
+    public void setNotarialService(List<NotarialService> notarialService) {
+        this.notarialServices = notarialService;
     }
 
 }

@@ -6,10 +6,15 @@ package sas.edu.notarial_office.model;
  * 14 Aug 2020
  */
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.Objects;
 
+@Document
 public class NotarialService {
 
+    @Id
     private String id;
     private String name;
     private String description;

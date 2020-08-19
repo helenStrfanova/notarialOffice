@@ -14,7 +14,7 @@ import sas.edu.notarial_office.servises.notarialService.impls.NotarialServiceSer
 
 import java.util.List;
 
-@RequestMapping("/api/notarialServise")
+@RequestMapping("/api/notarialService")
 @RestController
 public class NotarialServiseRestController {
 

@@ -8,9 +8,7 @@ package sas.edu.notarial_office.controller.rest;/*
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import sas.edu.notarial_office.model.Client;
-import sas.edu.notarial_office.model.Discount;
 import sas.edu.notarial_office.servises.client.impls.ClientServicesImpl;
-import sas.edu.notarial_office.servises.discount.impls.DiscountServisesImpls;
 
 import java.util.List;
 
@@ -40,6 +38,4 @@ public class ClientRestConroller {
     Client getClient(@PathVariable("id") String id){
         return clientServicesImpl.get(id);
     }
-
-
 }

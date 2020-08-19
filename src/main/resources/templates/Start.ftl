@@ -15,11 +15,11 @@
 <body>
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <a class="nav-link" href="web/discount/get/list">Discount Web Controller </a>
-    <a class="nav-link" href="/api/discount">Discount Rest Controller </a> <br>
+    <a class="nav-link" href="/api/discount/get/list">Discount Rest Controller </a> <br>
     <a class="nav-link" href="web/notarialService/get/list">Notarial Service Web Controller </a>
-    <a class="nav-link" href="web/notarialService/get/list">Notarial Service Rest Controller </a>
+    <a class="nav-link" href="api/notarialService/get/list">Notarial Service Rest Controller </a>
     <a class="nav-link" href="web/client/get/list">Client Web Controller </a>
-    <a class="nav-link" href="/api/client">Client Rest Controller </a> <br>
+    <a class="nav-link" href="/api/client/get/list">Client Rest Controller </a> <br>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

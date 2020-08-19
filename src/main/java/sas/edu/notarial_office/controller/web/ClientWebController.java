@@ -13,11 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import sas.edu.notarial_office.form.ClientForm;
-import sas.edu.notarial_office.form.DiscountForm;
 import sas.edu.notarial_office.model.Client;
-import sas.edu.notarial_office.model.Discount;
 import sas.edu.notarial_office.servises.client.impls.ClientServicesImpl;
-import sas.edu.notarial_office.servises.discount.impls.DiscountServisesImpls;
 
 @Controller
 @RequestMapping("/web/client")
@@ -65,6 +62,7 @@ public class ClientWebController {
         Client client = new Client();
         client.setFirstName(clientForm.getFirstName());
         client.setLastName(clientForm.getLastName());
+        client.setPhoneNumber(clientForm.getPhoneNumber());
         client.setAddress(clientForm.getAddress());
         client.setDiscount(clientForm.getDiscount());
         clientServices.create(client);
@@ -80,6 +78,7 @@ public class ClientWebController {
                 client.getId(),
                 client.getFirstName(),
                 client.getLastName(),
+                client.getPhoneNumber(),
                 client.getAddress(),
                 client.getDiscount()
         );
@@ -94,6 +93,7 @@ public class ClientWebController {
         client.setFirstName(clientForm.getFirstName());
         client.setLastName(clientForm.getLastName());
         client.setAddress(clientForm.getAddress());
+        client.setPhoneNumber(clientForm.getPhoneNumber());
         client.setDiscount(clientForm.getDiscount());
         clientServices.update(client);
 

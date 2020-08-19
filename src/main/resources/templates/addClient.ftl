@@ -8,7 +8,6 @@
           type="text/css" href="<@spring.url '/css/style.css'/>"/>
 </head>
 <body>
-
 <div>
     <fieldset>
         <legend>Add client</legend>

@@ -62,7 +62,7 @@ public class Discount {
         this.name = name;
     }
 
-    public void setPercentageDiscount(byte percentageDiscount) {
+    public void setPercentageDiscount(int percentageDiscount) {
         this.percentageDiscount = percentageDiscount;
     }
 

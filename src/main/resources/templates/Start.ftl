@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Discount</h1>
-<a href="/web/discount">DiscountWebController</a>
+<a href="web/discount/get/list">DiscountWebController</a>
 <a href="/api/discount">DiscountRestController</a>
 </body>
 </html>

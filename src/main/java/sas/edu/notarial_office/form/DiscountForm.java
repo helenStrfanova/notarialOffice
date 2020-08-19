@@ -12,7 +12,7 @@ public class DiscountForm {
 
     private String id;
     private String name;
-    private byte percentageDiscount;
+    private int percentageDiscount;
 
     /********************************
      * 3 types of constructors
@@ -21,12 +21,12 @@ public class DiscountForm {
     public DiscountForm() {
     }
 
-    public DiscountForm(String name, byte percentageDiscount) {
+    public DiscountForm(String name, int percentageDiscount) {
         this.name = name;
         this.percentageDiscount = percentageDiscount;
     }
 
-    public DiscountForm(String id, String name, byte percentageDiscount) {
+    public DiscountForm(String id, String name, int percentageDiscount) {
         this.id = id;
         this.name = name;
         this.percentageDiscount = percentageDiscount;
@@ -40,7 +40,7 @@ public class DiscountForm {
         return name;
     }
 
-    public byte getPercentageDiscount() {
+    public int getPercentageDiscount() {
         return percentageDiscount;
     }
 
@@ -52,7 +52,7 @@ public class DiscountForm {
         this.name = name;
     }
 
-    public void setPercentageDiscount(byte percentageDiscount) {
+    public void setPercentageDiscount(int percentageDiscount) {
         this.percentageDiscount = percentageDiscount;
     }
 

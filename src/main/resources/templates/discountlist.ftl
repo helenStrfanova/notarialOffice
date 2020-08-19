@@ -28,7 +28,6 @@
             </tr>
         </#list>
     </table>
-
     <div>
         <a href="/web/discount/reloadDB">
             <input type="button", value="Reload Database" style="

@@ -1,5 +1,4 @@
-package sas.edu.notarial_office.dao.Client.iterfaces;
-/*
+package sas.edu.notarial_office.servises.client.interfaces;/*
  * @author Alona Sviridova
  * @version 1
  * Project name: "notarialOffice"
@@ -10,11 +9,12 @@ import sas.edu.notarial_office.model.Client;
 
 import java.util.List;
 
-public interface IDaoClient {
+public interface IClientServices {
 
     Client create(Client client);
     Client get(String id);
     Client delete(String id);
     Client update(Client client);
     List<Client> getAll();
+
 }

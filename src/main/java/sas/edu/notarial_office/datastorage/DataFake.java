@@ -8,8 +8,10 @@ package sas.edu.notarial_office.datastorage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import sas.edu.notarial_office.model.Client;
 import sas.edu.notarial_office.model.Discount;
 import sas.edu.notarial_office.model.NotarialService;
+import sas.edu.notarial_office.repository.ClientRepository;
 import sas.edu.notarial_office.repository.DiscountRepository;
 import sas.edu.notarial_office.repository.NotarialServiceRepository;
 
@@ -25,6 +27,9 @@ public class DataFake {
     DiscountRepository discountRepository;
     @Autowired
     NotarialServiceRepository notarialServiceRepository;
+    @Autowired
+    ClientRepository clientRepository;
+
 
     List<Discount> discounts = new LinkedList<>(Arrays.asList(
             new Discount("Small", 5),
@@ -36,12 +41,20 @@ public class DataFake {
             new NotarialService("Apostil", "Make apostil on the document."),
             new NotarialService("Testament", "Help in making a testament")));
 
+    List<Client> clients = new LinkedList<>(Arrays.asList(
+            new Client("Alex", "Kachmar","Novoyavorivsk","+380998826577", discounts.get(0)),
+            new Client("Ivan", "Malik","PoltOva","+380974456578", discounts.get(1)),
+            new Client("Anton", "Karatyt","Merefa","+3809689751", discounts.get(2))
+            ));
+
     @PostConstruct
     public void init(){
         discountRepository.deleteAll();
         discountRepository.saveAll(discounts);
         notarialServiceRepository.deleteAll();
         notarialServiceRepository.saveAll(notarialServices);
+        clientRepository.deleteAll();
+        clientRepository.saveAll(clients);
     }
 
     public List<Discount> getDiscounts() {
@@ -58,4 +71,10 @@ public class DataFake {
         this.notarialServices = notarialService;
     }
 
+    public List<Client> getClients() {
+        return clients;
+    }
+    public void setClients(List<Client> clients) {
+        this.clients = clients;
+    }
 }

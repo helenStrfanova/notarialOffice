@@ -10,9 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import sas.edu.notarial_office.model.Client;
 import sas.edu.notarial_office.model.Discount;
+import sas.edu.notarial_office.model.Document;
 import sas.edu.notarial_office.model.NotarialService;
 import sas.edu.notarial_office.repository.ClientRepository;
 import sas.edu.notarial_office.repository.DiscountRepository;
+import sas.edu.notarial_office.repository.DocumentRepository;
 import sas.edu.notarial_office.repository.NotarialServiceRepository;
 
 import javax.annotation.PostConstruct;
@@ -29,6 +31,8 @@ public class DataFake {
     NotarialServiceRepository notarialServiceRepository;
     @Autowired
     ClientRepository clientRepository;
+    @Autowired
+    DocumentRepository documentRepository;
 
 
     List<Discount> discounts = new LinkedList<>(Arrays.asList(
@@ -47,6 +51,11 @@ public class DataFake {
             new Client("Anton", "Karatyt","Merefa","+3809689751", discounts.get(2))
             ));
 
+    List<Document> documents = new LinkedList<>(Arrays.asList(
+            new Document(notarialServices.get(0),66.4,2.2),
+            new Document(notarialServices.get(1),102.02,0.9),
+            new Document(notarialServices.get(2),364,10)));
+
     @PostConstruct
     public void init(){
         discountRepository.deleteAll();
@@ -55,6 +64,8 @@ public class DataFake {
         notarialServiceRepository.saveAll(notarialServices);
         clientRepository.deleteAll();
         clientRepository.saveAll(clients);
+        documentRepository.deleteAll();
+        documentRepository.saveAll(documents);
     }
 
     public List<Discount> getDiscounts() {
@@ -76,5 +87,12 @@ public class DataFake {
     }
     public void setClients(List<Client> clients) {
         this.clients = clients;
+    }
+
+    public List<Document> getDocuments() {
+        return documents;
+    }
+    public void setDocuments(List<Document> documents) {
+        this.documents = documents;
     }
 }

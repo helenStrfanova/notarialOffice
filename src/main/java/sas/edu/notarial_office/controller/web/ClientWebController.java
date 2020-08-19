@@ -14,7 +14,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import sas.edu.notarial_office.form.ClientForm;
 import sas.edu.notarial_office.model.Client;
+import sas.edu.notarial_office.model.Discount;
 import sas.edu.notarial_office.servises.client.impls.ClientServicesImpl;
+import sas.edu.notarial_office.servises.discount.impls.DiscountServisesImpls;
+
+import javax.annotation.PostConstruct;
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/web/client")
@@ -22,6 +28,18 @@ public class ClientWebController {
 
     @Autowired
     ClientServicesImpl clientServices;
+
+    @Autowired
+    DiscountServisesImpls discountServises;
+
+    Map<String, String> movs;
+
+    @PostConstruct
+    void init(){
+
+        movs = new HashMap<>();
+    }
+
 
     @RequestMapping(value = "/get/list", method = RequestMethod.GET)
     String showAll(Model model) {
@@ -53,6 +71,10 @@ public class ClientWebController {
     @RequestMapping(value = "/create", method = RequestMethod.GET)
     public String createClient(Model model) {
         ClientForm clientForm = new ClientForm();
+        for (Discount discount:discountServises.getAll()){
+            movs.put(discount.getId(),discount.getName());
+        }
+        model.addAttribute("movs",movs);
         model.addAttribute("clientForm", clientForm);
         return "addClient";
     }
@@ -82,6 +104,10 @@ public class ClientWebController {
                 client.getAddress(),
                 client.getDiscount()
         );
+        for (Discount discount:discountServises.getAll()){
+            movs.put(discount.getId(),discount.getName());
+        }
+        model.addAttribute("movs",movs);
         model.addAttribute("clientForm", clientForm);
         return "updateClient";
     }

@@ -20,6 +20,8 @@
     <a class="nav-link" href="api/notarialService/get/list">Notarial Service Rest Controller </a>
     <a class="nav-link" href="web/client/get/list">Client Web Controller </a>
     <a class="nav-link" href="/api/client/get/list">Client Rest Controller </a> <br>
+    <a class="nav-link" href="web/document/get/list">Document Web Controller </a>
+    <a class="nav-link" href="/api/document/get/list">Document Rest Controller </a> <br>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

@@ -9,9 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sas.edu.notarial_office.datastorage.DataFake;
 import sas.edu.notarial_office.model.Client;
-import sas.edu.notarial_office.model.Discount;
 import sas.edu.notarial_office.repository.ClientRepository;
-import sas.edu.notarial_office.repository.DiscountRepository;
 import sas.edu.notarial_office.servises.client.interfaces.IClientServices;
 
 import java.util.List;

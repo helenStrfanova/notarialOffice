@@ -9,14 +9,14 @@
 </head>
 <body>
 <div>
-    <fieldset>
+    <fieldset style="display: inline-block">
         <legend>Add client</legend>
         <form name="client" action="" method="POST">
             First name:<@spring.formInput "clientForm.firstName" "" "text"/> <br>
             Last name:<@spring.formInput "clientForm.lastName" "" "text"/> <br>
             Address:<@spring.formInput "clientForm.address" "" "text"/> <br>
             Phone number:<@spring.formInput "clientForm.phoneNumber" "" "text"/> <br>
-            Discount:<@spring.formInput "clientForm.discount" "" "text"/> <br>
+            Discount:<@spring.formSingleSelect "clientForm.discount", movs, ""/> <br>
             <input type="submit" value="Create"/>
         </form>
     </fieldset>

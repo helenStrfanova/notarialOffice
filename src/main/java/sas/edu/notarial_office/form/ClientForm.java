@@ -1,4 +1,5 @@
-package sas.edu.notarial_office.form;/*
+package sas.edu.notarial_office.form;
+/*
  * @author Alona Sviridova
  * @version 1
  * Project name: "notarialOffice"

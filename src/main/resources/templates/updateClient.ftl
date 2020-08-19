@@ -16,7 +16,7 @@
             Last name:<@spring.formInput "clientForm.lastName" "" "text"/> <br>
             Address:<@spring.formInput "clientForm.address" "" "text"/> <br>
             Phone number:<@spring.formInput "clientForm.phoneNumber" "" "text"/> <br>
-            Discount:<@spring.formInput "clientForm.discount" "" "text"/> <br>
+            Discount:<@spring.formSingleSelect "clientForm.discount", movs, ""/> <br>
             <input type="submit" value="Update"/>
         </form>
     </fieldset>

@@ -6,8 +6,10 @@
     <title>THE MAIN PAGE EVER!</title>
     <style>
         body{
-            background: url(https://droit.u-bordeaux.fr/var/ezdemo_site/storage/images/media/faculte-de-droit-et-science-politique/images/formations/2016-droit-prive/droit-notarial-c-instantvise-fotolia/335566-1-fre-FR/Droit-notarial-C-instantvise-Fotolia_Grande.jpg) no-repeat;
-            background-size: 100%;
+            background: url(https://i.imgflip.com/19gb40.jpg) no-repeat;
+            background-size: 55%;
+            background-position: top;
+            background-position-y: top;
         }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -22,6 +24,8 @@
     <a class="nav-link" href="/api/client/get/list">Client Rest Controller </a> <br>
     <a class="nav-link" href="web/document/get/list">Document Web Controller </a>
     <a class="nav-link" href="/api/document/get/list">Document Rest Controller </a> <br>
+    <a class="nav-link" href="web/agreement/get/list">Agreement Web Controller </a>
+    <a class="nav-link" href="/api/agreement/get/list">Agreement Rest Controller </a> <br>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>

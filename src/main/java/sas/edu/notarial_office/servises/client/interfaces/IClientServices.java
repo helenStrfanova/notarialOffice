@@ -6,7 +6,6 @@ package sas.edu.notarial_office.servises.client.interfaces;/*
  */
 
 import sas.edu.notarial_office.model.Client;
-
 import java.util.List;
 
 public interface IClientServices {

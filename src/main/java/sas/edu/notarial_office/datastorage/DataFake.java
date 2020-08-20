@@ -8,14 +8,8 @@ package sas.edu.notarial_office.datastorage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import sas.edu.notarial_office.model.Client;
-import sas.edu.notarial_office.model.Discount;
-import sas.edu.notarial_office.model.Document;
-import sas.edu.notarial_office.model.NotarialService;
-import sas.edu.notarial_office.repository.ClientRepository;
-import sas.edu.notarial_office.repository.DiscountRepository;
-import sas.edu.notarial_office.repository.DocumentRepository;
-import sas.edu.notarial_office.repository.NotarialServiceRepository;
+import sas.edu.notarial_office.model.*;
+import sas.edu.notarial_office.repository.*;
 
 import javax.annotation.PostConstruct;
 import java.util.Arrays;
@@ -33,6 +27,8 @@ public class DataFake {
     ClientRepository clientRepository;
     @Autowired
     DocumentRepository documentRepository;
+    @Autowired
+    AgreementRepository agreementRepository;
 
 
     List<Discount> discounts = new LinkedList<>(Arrays.asList(
@@ -56,6 +52,11 @@ public class DataFake {
             new Document(notarialServices.get(1),102.02,0.9),
             new Document(notarialServices.get(2),364,10)));
 
+    List<Agreement> agreements = new LinkedList<>(Arrays.asList(
+            new Agreement(documents.get(0),clients.get(0),5,1,"No"),
+            new Agreement(documents.get(1),clients.get(1),111,56,"No"),
+            new Agreement(documents.get(2),clients.get(2),541,41,"No")));
+
     @PostConstruct
     public void init(){
         discountRepository.deleteAll();
@@ -66,6 +67,8 @@ public class DataFake {
         clientRepository.saveAll(clients);
         documentRepository.deleteAll();
         documentRepository.saveAll(documents);
+        agreementRepository.deleteAll();
+        agreementRepository.saveAll(agreements);
     }
 
     public List<Discount> getDiscounts() {
@@ -94,5 +97,12 @@ public class DataFake {
     }
     public void setDocuments(List<Document> documents) {
         this.documents = documents;
+    }
+
+    public List<Agreement> getAgreements() {
+        return agreements;
+    }
+    public void setAgreements(List<Agreement> agreements) {
+        this.agreements = agreements;
     }
 }

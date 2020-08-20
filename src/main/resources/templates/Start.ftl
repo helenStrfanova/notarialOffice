@@ -7,9 +7,20 @@
     <style>
         body{
             background: url(https://i.imgflip.com/19gb40.jpg) no-repeat;
-            background-size: 55%;
+            background-size:5%;
             background-position: top;
             background-position-y: top;
+        }
+        footer{
+
+            margin-left: 0%;
+            margin-right: 0%;
+            background-size: cover;
+            padding: 45px;
+            margin-bottom: 0.1%;
+            text-align: center;
+            color: cornsilk;
+            width: 1190px;
         }
     </style>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -44,9 +55,14 @@
         </ul>
     </div>
 </nav>
-<h1>Notarial office </h1>
+<h1  style="color: cadetblue" > Notarial office </h1>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
+<footer class="footer">
+    <p> e-mail: http.pug@gmail.com</p>
+    <p>Copyright© <time datetime="2018">2020</time>GitHub</p>
+    <script type="text/javascript" src="javascript.js"></script>
+</footer>
 </html>
